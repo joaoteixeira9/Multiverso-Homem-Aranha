@@ -1,0 +1,148 @@
+@import url('reset.css');
+@import url('global.css');
+
+.s-wrapper{
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+}
+
+.s-wrapper .s-coluna-esquerda{
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.s-wrapper .s-conteudo-principal{
+    height: 100%;
+    width: 100%;
+    background-color: var(--cor-vermelha);
+    padding-left: 30px;
+}
+
+.s-navegador{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.s-navegador ul li{
+    margin: 60px 0;    
+}
+
+.s-navegador ul li:first-child{
+    margin-top: 0;    
+}
+
+.s-navegador ul li:last-child{
+    margin-bottom: 0;    
+}
+
+.s-navegador ul li a{
+    color: white;
+    border: 2px solid white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-navegador::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+.s-navegador ul{
+    z-index: 1;
+}
+
+.s-navegador ul li a:hover,
+.s-navegador ul li a.active{
+    color: var(--cor-vermelha);
+    background-color: white;
+}
+
+.s-navegador .s-navegador-icone{
+    position: absolute;
+    top: -20px;
+}
+
+.s-wrapper .s-conteudo-principal{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    padding-left: 130px;
+}
+
+.s-wrapper .s-conteudo-principal-top{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.s-wrapper .s-conteudo-principal-bottom{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.s-wrapper .s-conteudo-principal .s-logo img{
+    margin-top: 50px;
+    margin-left: 0;
+    margin-bottom: 30px;
+    width: 95%;
+}
+
+.pills{
+    margin-bottom: 20px;
+}
+
+.pills ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.pills ul li{
+    background-color: var(--cor-vermelha);
+    color: white;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.pills ul li:first-child{
+    margin-left: 0;
+}
+
+.s-wrapper .s-conteudo-principal-top .s-descricao{
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.s-descricao-texto p{
+    color: white;
+    line-height: 170%;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/home.css">
-    <script src="assets/js/card-hover.js"></script>
+    <script src="assets/js/main.js"></script>
     <title>Spider-Man: Multiverso</title>
 </head>
 <body>
@@ -14,40 +14,42 @@
                 <a href="#">Página Inicial</a>
             </li>
             <li class="s-menu-item">
-                <a href="#">Tobey Maguire</a>
+                <a href="/pages/tobey-maguire/spiderman1.html">Tobey Maguire</a>
             </li>
             <li class="s-menu-item s-menu-icon">
                 <img src="assets/images/icons/spider.svg" alt="Spider-Man: Multiverso">
             </li>
             <li class="s-menu-item">
-                <a href="#">Andrew Garfield</a>
+                <a href="/pages/andrew-garfield/spiderman1.html">Andrew Garfield</a>
             </li>
             <li class="s-menu-item">
-                <a href="#">Tom Holland</a>
+                <a href="/pages/tom-holland/spiderman1.html">Tom Holland</a>
             </li>
         </ul>
     </nav>
     <div class="s-container">
-        <a href="#" class="s-card" id="spider-man-01">
-            <img class="s-card-background" src="assets/images/pic-sm-bg-01.jpg">
-            <img class="s-card-img" src="assets/images/spider-man-01.png" alt="Tobey Maguire">
-            <h2 class="s-card-titulo">Tobey Maguire</h2>
-        </a>
-        <a href="#" class="s-card" id="spider-man-02">
-            <img class="s-card-background" src="assets/images/pic-sm-bg-02.jpg">
-            <img class="s-card-img" src="assets/images/spider-man-02.png" alt="Andre Garfield">
-            <h2 class="s-card-titulo">Andrew Garfield</h2>
-        </a>
-        <a href="#" class="s-card" id="spider-man-03">
-            <img class="s-card-background" src="assets/images/pic-sm-bg-03.jpg">
-            <img class="s-card-img" src="assets/images/spider-man-03.png" alt="Tom Holland">
-            <h2 class="s-card-titulo">Tom Holland</h2>
-        </a>
+        <div class="s-carrosel-cards" style="transform: translateZ(-40vw) rotateY(0deg);">
+            <a href="/pages/tobey-maguire/spiderman1.html" class="s-card" id="spider-man-01">
+                <img class="s-card-background" src="assets/images/pic-sm-bg-01.jpg">
+                <img class="s-card-img" src="assets/images/spider-man-01.png" alt="Tobey Maguire">
+                <h2 class="s-card-titulo">Tobey Maguire</h2>
+            </a>
+            <a href="/pages/andrew-garfield/spiderman1.html" class="s-card" id="spider-man-02">
+                <img class="s-card-background" src="assets/images/pic-sm-bg-02.jpg">
+                <img class="s-card-img" src="assets/images/spider-man-02.png" alt="Andre Garfield">
+                <h2 class="s-card-titulo">Andrew Garfield</h2>
+            </a>
+            <a href="/pages/tom-holland/spiderman1.html" class="s-card" id="spider-man-03">
+                <img class="s-card-background" src="assets/images/pic-sm-bg-03.jpg">
+                <img class="s-card-img" src="assets/images/spider-man-03.png" alt="Tom Holland">
+                <h2 class="s-card-titulo">Tom Holland</h2>
+            </a>
+        </div>
     </div>
     <div class="s-controlador">
-        <div class="s-controlador-botao">01</div>
-        <div class="s-controlador-botao">02</div>
-        <div class="s-controlador-botao">03</div>
+        <div id="1" onclick="SelecionarItemCarrosel(this)" class="s-controlador-botao  s-controlador-botao-ativo">01</div>
+        <div id="2" onclick="SelecionarItemCarrosel(this)" class="s-controlador-botao">02</div>
+        <div id="3" onclick="SelecionarItemCarrosel(this)" class="s-controlador-botao">03</div>
         <div class="s-controlador-linha"></div>
     </div>
 </body>

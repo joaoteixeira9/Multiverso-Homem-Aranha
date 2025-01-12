@@ -42,16 +42,28 @@ body::before{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    perspective: 3000px;
 }
 
 .s-card{
     border: 0.5rem solid white;
-    width: calc(100% / 3 - 8%);
+    width: 100%;
     height: 70vh;
-    position: relative;
+    position: absolute;
     transition: filter 1s ease-in-out;
 }
 
+.s-card:nth-child(1){
+    transform: rotateY(0deg) translateZ(50vw);
+}
+
+.s-card:nth-child(2){
+    transform: rotateY(120deg) translateZ(50vw);
+}
+
+.s-card:nth-child(3){
+    transform: rotateY(240deg) translateZ(50vw);
+}
 .s-card-background{
     width: 100%;
     height: 100%;
@@ -80,11 +92,13 @@ body::before{
 }
 
 .s-controlador{
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    bottom: 1.5rem;
+    width: 100%;
 }
 
 .s-controlador-botao{
@@ -110,6 +124,13 @@ body::before{
 
 .s-controlador-botao:nth-child(2){
     margin: 0 3.75rem;
+}
+
+.s-controlador-botao-ativo{
+    background-color: white;
+    color: var(--cor-vermelha);
+    border: 0.1875rem solid var(--cor-vermelha);
+    outline: 0.125rem solid white;
 }
 
 .s-controlador-linha{
@@ -154,4 +175,12 @@ body[id^="spider-man-"] .s-card:not(.s-card-hovered){
 
 .s-card-hovered .s-card-titulo{
     bottom: 50%;
+}
+
+.s-carrosel-cards{
+    display: flex;
+    justify-content: center;
+    width: calc(100vw / 3 - 10%);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
 }
